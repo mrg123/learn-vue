@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+</script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('#input2').click(function(){
+			var url = 'http://www.xxxx.com?='+$('#input1').val();
+			window.location.href = url;
+		});
+});
+		
+	</script>
+</head>
+<body>
+
+
+<input type="text" id="input1" value="">
+<input type="submit" value="Submit" id="input2">
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+	<link href="base.css" rel="stylesheet"/>
+
+</head>
+<body style="width:50%">
+<div id="app">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+<p>
+input绑定了message这个值，然后在input修改的时候，message就改了，由于双向绑定，同时页面的html（{{ message }}）进行了修改！
+</p>
+
+<script>
+Vue.config.devtools = true;
+    new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>
+</body>
+</html>

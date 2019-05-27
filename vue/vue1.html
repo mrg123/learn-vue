@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+	<link href="base.css" rel="stylesheet"/>
+
+</head>
+<body style="width:50%">
+<div id="app">
+    {{ message }}
+</div>
+<p>
+我们已经成功创建了第一个 Vue 应用！看起来这跟渲染一个字符串模板非常类似，但是 Vue 在背后做了大量工作。现在数据和 DOM 已经被建立了关联，所有东西都是响应式的。我们要怎么确认呢？打开你的浏览器的 JavaScript 控制台 (就在这个页面打开)，并修改 app.message 的值，你将看到上例相应地更新。
+
+{{ message }} 这个就是模板
+</p>
+
+<script>
+    Vue.config.devtools = true;
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'VUE简单应用所有东西都是响应式的。'
+        }
+    });
+</script>
+</body>
+</html>

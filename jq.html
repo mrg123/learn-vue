@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+</script>
+
+	<script type="text/javascript">
+		/*
+		var id;
+		console.log(typeof $('body').find('#id'));
+		console.log($('#id').length);
+		console.log($('#id'));
+		console.log(id);
+		id = 3;
+		console.log(typeof id);
+		id = '3';
+		console.log(typeof id);
+		id = {};
+		console.log(typeof id);
+		// undefined 只适用于未赋值的变量,或不存在的变量,而 $('')的方式都是返回object
+		*/
+		var rule = /^[\d|a-zA-Z|\-|_]{3,20}$/;
+		ru();
+		function ru(){
+			var str = '00acd-_sd545asssssssssssss';
+			var str1 = '00acd-_sd545a';
+			var str2 = '00acdsd545a';
+			var str3 = '00acdsd545aA第三';
+			var str4 = '第';
+			var str5 = 'sa1';
+			var str6 = 'sa';
+			var str7 = '-__';
+			if(!rule.test(str)){console.log(0)};
+			if(!rule.test(str1)){console.log(1)};
+			if(!rule.test(str2)){console.log(2)};
+			if(!rule.test(str3)){console.log(3)};
+			if(!rule.test(str4)){console.log(4)};
+			if(!rule.test(str5)){console.log(5)};
+			if(!rule.test(str6)){console.log(6)};
+			if(!rule.test(str7)){console.log(7)};
+			
+			
+		}
+		
+		var str = '0a0 0a1';
+var rule = /^[\d|a-zA-Z|\-|_\s]{3,20}$/;
+        if(!rule.test(str)){
+            console.log('邮箱不正确');
+           
+        }else{
+			console.log('邮箱正确');
+		}
+		
+		
+		
+        
+	</script>
+</head>
+<body>
+<p>如果你点我，我就会消失。</p>
+<p>继续点我!</p>
+<p>接着点我!</p>
+
+
+<p>&#8237;</p>
+<p>end</p>
+
+
+<input id="not_update" style="vertical-align:middle;-webkit-appearance: checkbox;" type="checkbox" name="is_shipping_method_not_allow_update" readonly="readonly" checked="checked">
+
+<label for="not_update">该派送方式不允许修改<i class="Qico help_tip altl"><span class="hint">选定后物流方式将不可修改</span></i> </label>
+</body>
+</html>

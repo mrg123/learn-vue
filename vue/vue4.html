@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax-post</title>
+    <script src="vue.min.js"></script>
+    <script src="vue-resource.min.js"></script>
+</head>
+<body>
+<div id="app">
+    a= <input type="text" id="t1" v-model="t1">
+    b= <input type="text" id="t2" v-model="t2">
+    a-b=<span class="a">{{msg}}</span>
+    <input type="button" value="submit" @click="post()">
+</div>
+ 
+<script>
+Vue.config.devtools = true;
+    new Vue({
+        el:'#app',
+        data:{
+            t1:'',
+            t2:'',
+            msg:''
+        },
+        methods:{
+            post:function(){
+                this.$http.post('post.php',{
+                    a:this.t1,
+                    b:this.t2
+                },{
+                    emulateJSON:true
+                }).then(function(res){ 
+                    this.msg=res.data;
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>
