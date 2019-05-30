@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            {{message}}
+        </div>
+
+        <div id="app2">
+            <span v-if="sean">Now you see me</span>
+        </div>
+
+        <div id="app3">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                    {{ todo.text2 }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app4">
+            <p>
+                {{message}}
+            </p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
