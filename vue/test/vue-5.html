@@ -30,6 +30,28 @@
         </div>
 
 
+        <div id="app6">
+            <p>{{message}}</p>
+            <input v-model="message">
+        </div>
+
+
+
+        <ol id="app7">
+            <todo-item></todo-item>
+        </ol>
+
+
+        <div id="app8">
+            <ol>
+                <todo
+                    v-for="item in groceryList"
+                    v-bind:k2="item"
+                    v-bind:key="item.id">
+               </todo>
+            </ol>
+        </div>
+
         <script src="index.js"></script>
     </body>
 
